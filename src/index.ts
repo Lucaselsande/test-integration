@@ -11,7 +11,10 @@ app.get("/get", async (req, res) => {
   res.status(201).send({ message: "OK", body: req.body });
 });
 app.post("/post", async (req, res) => {
-  console.log(req.body);
+  const body = JSON.stringify(req.body)
+  console.log('llego evento');
+  console.log(body);
+  console.log('respondo 201');
   res.status(201).send({ message: "OK", body: req.body });
 });
 app.patch("/comment", async (req, res) => {
