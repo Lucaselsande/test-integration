@@ -11,11 +11,13 @@ app.get("/get", async (req, res) => {
   res.status(201).send({ message: "OK", body: req.body });
 });
 app.post("/post", async (req, res) => {
-  const body = JSON.stringify(req.body)
-  console.log('llego evento');
+  const body = JSON.stringify(req.body);
+  console.log("llego evento");
   console.log(body);
-  console.log('respondo 200');
-  res.status(200).send({ message: "OK", body: req.body });
+  const currentTime = new Date().toString();
+  console.log("currentTime:", currentTime);
+  console.log("respondo 403");
+  res.status(403).send({ message: "OK", body: req.body });
 });
 app.patch("/comment", async (req, res) => {
   console.log(req.body);
