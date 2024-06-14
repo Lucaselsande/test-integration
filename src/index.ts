@@ -16,8 +16,8 @@ app.post("/post", async (req, res) => {
   console.log(body);
   const currentTime = new Date().toString();
   console.log("currentTime:", currentTime);
-  console.log("respondo 403");
-  res.status(403).send({ message: "OK", body: req.body });
+  console.log("respondo 200");
+  res.status(200).send({ message: "OK", body: req.body });
 });
 app.patch("/comment", async (req, res) => {
   console.log(req.body);
