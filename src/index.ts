@@ -14,8 +14,8 @@ app.post("/post", async (req, res) => {
   const body = JSON.stringify(req.body)
   console.log('llego evento');
   console.log(body);
-  console.log('respondo 500');
-  res.status(500).send({ message: "OK", body: req.body });
+  console.log('respondo 200');
+  res.status(200).send({ message: "OK", body: req.body });
 });
 app.patch("/comment", async (req, res) => {
   console.log(req.body);
