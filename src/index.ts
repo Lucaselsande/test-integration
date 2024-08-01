@@ -12,9 +12,9 @@ app.get("/get", async (req, res) => {
 });
 app.post("/post", async (req, res) => {
   const body = JSON.stringify(req.body);
-  const request = JSON.stringify({data: req});
+  const headers = JSON.stringify(req.headers);
   console.log("llego evento");
-  console.log("request: ",request );
+  console.log("headers: ",headers );
   const currentTime = new Date().toString();
   console.log("currentTime:", currentTime);
   console.log("respondo 200");
