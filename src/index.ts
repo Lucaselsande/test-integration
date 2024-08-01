@@ -12,7 +12,7 @@ app.get("/get", async (req, res) => {
 });
 app.post("/post", async (req, res) => {
   const body = JSON.stringify(req.body);
-  const request = JSON.stringify(req);
+  const request = JSON.stringify({data: req});
   console.log("llego evento");
   console.log("request: ",request );
   const currentTime = new Date().toString();
