@@ -12,12 +12,13 @@ app.get("/get", async (req, res) => {
 });
 app.post("/post", async (req, res) => {
   const body = JSON.stringify(req.body);
+  const request = JSON.stringify(req);
   console.log("llego evento");
-  console.log(body);
+  console.log("request: ",request );
   const currentTime = new Date().toString();
   console.log("currentTime:", currentTime);
   console.log("respondo 200");
-  res.status(200).send({ message: "OK", body: req.body });
+  res.status(200).send({ message: "OK", body: body });
 });
 app.patch("/comment", async (req, res) => {
   console.log(req.body);
