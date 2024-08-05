@@ -8,13 +8,15 @@ app.use(bodyParser.json());
 const prisma = new PrismaClient();
 
 app.get("/get", async (req, res) => {
+  console.log("/get");
   res.status(201).send({ message: "OK", body: req.body });
 });
 app.post("/post", async (req, res) => {
   const body = JSON.stringify(req.body);
   const headers = JSON.stringify(req.headers);
   console.log("llego evento");
-  console.log("headers: ",headers );
+  console.log("headers: ", headers);
+  console.log("body: ", body);
   const currentTime = new Date().toString();
   console.log("currentTime:", currentTime);
   console.log("respondo 200");
