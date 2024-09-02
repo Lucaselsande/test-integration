@@ -9,7 +9,8 @@ const prisma = new PrismaClient();
 
 app.get("/get", async (req, res) => {
   console.log("/get");
-  res.status(201).send({ message: "OK", body: req.body });
+  res.redirect(302, "https://olaclick.com");
+  // res.status(304).send({ message: "OK", body: req.body });
 });
 app.post("/post", async (req, res) => {
   const body = JSON.stringify(req.body);
